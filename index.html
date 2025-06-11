@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Main-Project</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-first-box">
+        <a href="./index_sub.html">
+          <img src="./styles/assets/logo.png" class="main-logo" />
+        </a>
+
+        <form class="nav-form">
+          <input
+            type="text"
+            placeholder="Search events"
+            class="nav-search nav-events"
+          />
+          <input
+            type="text"
+            placeholder="Search location"
+            value="Mountain View, CA"
+            class="nav-search nav-location"
+          />
+          <button type="submit" class="button-search">
+            <img src="./styles/assets/search-white.svg" />
+          </button>
+        </form>
+      </div>
+      <div class="nav-second-box">
+        <span>
+          <img src="./styles/assets/PLANET.svg" /><a class="language-button">
+            English
+          </a>
+        </span>
+        <a href="#" class="login-button">Log in</a>
+        <a href="#" class="sign-up-button">Sign up</a>
+      </div>
+
+      <form class="nav-form-768px">
+        <input
+          type="text"
+          placeholder="Search events"
+          class="nav-search nav-events"
+        />
+        <button type="submit" class="button-search">
+          <img src="./styles/assets/search-white.svg" />
+        </button>
+      </form>
+    </nav>
+    <main class="main">
+      <div class="join-box">
+        <div class="text-join">
+          <h1>The people platform—Where interests become friendships</h1>
+          <p>
+            Whatever your interest, from hiking and reading to networking and
+            skill sharing, there are thousands of people who share it on Meetup.
+            Events are happening every day—sign up to join the fun.
+          </p>
+          <a href="index_sub.html">Join Meetup</a>
+        </div>
+        <div class="join-img"></div>
+      </div>
+      <div class="container-events">
+        <div class="title-events">
+          <div class="title-location-container">
+            <h2>Events near</h2>
+            <div class="location-sub-button">
+              <a href="#">Mountain View, CA </a>
+              <img src="./styles/assets/pen.svg" alt="" />
+            </div>
+          </div>
+          <a class="button-see-all">See all events</a>
+        </div>
+        <section class="events" id="events"></section>
+      </div>
+      <div class="online-event-container">
+        <div class="title-online-event">
+          <h2>Upcoming online events</h2>
+          <a href="#" class="button-see-all"> See all events</a>
+        </div>
+        <section class="online-events" id="online-events"></section>
+      </div>
+      <div class="join-banner">
+        <div class="text-banner-box">
+          <h2>Join Meetup</h2>
+          <p>
+            People use Meetup to meet new people, learn new things, find
+            support, get out of their comfort zones, and pursue their passions,
+            together. Membership is free.
+          </p>
+          <a href="#">Sign up</a>
+        </div>
+        <img class="banner-img" src="./styles/assets/banner_image.png" />
+      </div>
+      <div class="categories-box" id="categories-box">
+        <h2>Explore top categories</h2>
+        <section class="categories" id="categories"></section>
+      </div>
+      <div class="popular-cities">
+        <h2>Popular cities on Meetup</h2>
+        <p>
+          Looking for fun things to do near you? See what Meetup organizers are
+          planning in cities around the country.
+        </p>
+        <section class="cities" id="cities"></section>
+      </div>
+      <div class="functions-block">
+        <h2>How Meetup works</h2>
+        <section class="functions">
+          <div class="function">
+            <div class="function-img-box">
+              <img src="./styles/assets/search-working-block.svg" />
+            </div>
+            <div class="function-text-box">
+              <h3>Discover events and groups</h3>
+              <p>See who's hosting local events for all the things you love</p>
+              <a href="#">Search events and groups</a>
+            </div>
+          </div>
+          <!-- ----------------------------------- -->
+          <div class="function">
+            <div div class="function-img-box">
+              <img src="./styles/assets/plus-working-block.svg" />
+            </div>
+            <div class="function-text-box">
+              <h3>Start a group to host events</h3>
+              <p>
+                Create your own Meetup group, and draw from a community of
+                millions
+              </p>
+              <a href="#">Start a group</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="friendships-block">
+        <h2>Friendships are made on Meetup</h2>
+        <p>
+          Since 2002, members have used Meetup to make new friends, meet
+          like-minded people, spend time on hobbies, and connect with locals
+          over shared interests. Learn how.
+        </p>
+        <section class="friendships-cards" id="friendships-cards"></section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="create-meetub-group">
+        <h4>Create your own Meetup group.</h4>
+        <button>Get Started</button>
+      </div>
+      <div class="footer-nav">
+        <section class="footer-nav-block">
+          <h4>Your Account</h4>
+          <a href="#">Sign up</a>
+          <a href="#">Log in</a>
+          <a href="#">Help</a>
+          <a href="#">Become an Affiliate</a>
+        </section>
+        <section class="footer-nav-block">
+          <h4>Discover</h4>
+          <a href="#">Groups</a>
+          <a href="#">Calendar</a>
+          <a href="#">Topics</a>
+          <a href="#">Cities</a>
+          <a href="#">Online Events</a>
+          <a href="#">Local Guides</a>
+          <a href="#">Make Friends</a>
+        </section>
+        <section class="footer-nav-block">
+          <h4>Meetup</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Meetup Pro</a>
+          <a href="#">Careers</a>
+          <a href="#">Apps</a>
+          <a href="#">Podcast</a>
+        </section>
+      </div>
+      <div class="follow-block">
+        <h4>Follow us</h4>
+        <div class="folow-categorie-block">
+          <div class="social">
+            <a href="https://www.facebook.com/meetup/"
+              ><img src="./styles/assets/social/Facebook.svg"
+            /></a>
+            <a href="https://x.com/meetup"
+              ><img src="./styles/assets/social/Twitter.svg"
+            /></a>
+            <a href="https://www.youtube.com/meetup"
+              ><img src="./styles/assets/social/YouTube.svg"
+            /></a>
+            <a href="https://www.instagram.com/meetup/"
+              ><img src="./styles/assets/social/Instagram.svg"
+            /></a>
+            <a href="https://www.tiktok.com/@meetup"
+              ><img src="./styles/assets/social/TikTok.svg"
+            /></a>
+          </div>
+          <div class="download">
+            <a href="https://play.google.com/store/apps/details?id=com.meetup">
+              <img src="./styles/assets/social/Google Play.png"
+            /></a>
+            <a
+              href="https://apps.apple.com/us/app/meetup-social-events-groups/id375990038"
+              ><img src="./styles/assets/social/AppStore.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="tm-policy">
+        <h5>© 2024 Meetup</h5>
+        <a href="">Terms of Service</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Do Not Sell or Share My Personal Data</a>
+        <a href="">Cookie Policy</a>
+        <a href="">Help</a>
+      </div>
+    </footer>
+    <script src="main_script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,399 @@
+@mixin flex-row-space-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-row-nwrap-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+@mixin card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 271px;
+  height: 400px;
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.11s ease-in;
+
+    &:hover {
+      @include shadow-ani-1();
+      transform: scale(1.02);
+      // transform: scale(0.93);
+    }
+  }
+  .event-card-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: v.$main-text-color;
+    cursor: pointer;
+  }
+  .event-card-text {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: v.$theme-text-color;
+  }
+  .event-date {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+
+    .icon-date {
+      background-image: url(./assets/date.svg);
+      background-size: contain;
+      width: 6%;
+      background-repeat: no-repeat;
+    }
+
+    .text-event-date {
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      color: v.$main-text-color;
+    }
+  }
+
+  .ticket-going-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    .going-people {
+      display: flex;
+      flex-direction: row;
+      .icon-check {
+        background-image: url(./assets/check.svg);
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+      }
+    }
+    .ticket-price {
+      display: flex;
+      flex-direction: row;
+      .icon-ticket {
+        background-image: url(./assets/ticket.svg);
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+@mixin sub-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: v.$main-text-color;
+}
+
+@mixin shadow-ani-1 {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+@mixin shadow-ani-2 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+@mixin transition-base {
+  transition: all 0.11s ease-in;
+}
+
+@mixin gray-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #707070;
+}
+
+@mixin basic-text-size {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@mixin basic-link {
+  color: v.$main-button-color;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@mixin nav-block {
+  .nav {
+    background-color: v.$basic-color;
+    padding: 20px 30px;
+    @include flex-row-space-center;
+    flex: 1 1 50%;
+  }
+
+  .nav-first-box {
+    @include flex-row-nwrap-center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    a {
+      @include transition-base();
+      &:hover {
+        transform: scale(1.15);
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+      .main-logo {
+        padding-right: 40px;
+        cursor: pointer;
+      }
+    }
+
+    .nav-form {
+      display: flex;
+      flex: 1 1 33%;
+      border-radius: 8px;
+      transition: all 0.11s ease-in;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      &:hover {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+          0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+          0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+      }
+      .nav-search {
+        border: 1px solid #d9d9d9;
+        padding: 10px;
+        font-weight: 400;
+        width: 100%;
+        &:focus {
+          outline: none;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+            rgba(30, 35, 39, 0.15) 0px 0px 0px 1px;
+        }
+        &::placeholder {
+          text-indent: 20px;
+          background: url(./assets/search.svg) no-repeat;
+          background-size: contain;
+          padding: 3px;
+        }
+      }
+    }
+
+    .nav-events {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    .nav-location {
+      border-left: none;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .button-search {
+      background-color: #f65858;
+      padding: 7px;
+      border: none;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      cursor: pointer;
+      transition: all 0.11s ease-in-out;
+      &:hover {
+        background-color: #d84e4e;
+      }
+      &:active {
+        background-color: #bf4545;
+        img {
+          transform: scale(0.85);
+        }
+      }
+    }
+  }
+
+  .nav-second-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+
+    span {
+      display: flex;
+      gap: 5px;
+      flex-direction: row;
+
+      img {
+        padding-bottom: 2px;
+      }
+
+      .language-button {
+        color: v.$main-text-color;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    .login-button {
+      color: v.$main-text-color;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      text-wrap: nowrap;
+    }
+
+    .sign-up-button {
+      color: v.$basic-color;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      background-color: v.$main-button-color;
+      border-radius: 8px;
+      padding: 8px 18px;
+      text-wrap: nowrap;
+      transition: all 0.11s ease-in-out;
+
+      &:hover {
+        background-color: #006b79;
+        transform: scale(1.09);
+      }
+
+      &:active {
+        background-color: #005c68;
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+@mixin footer-block {
+  .footer {
+    background-color: v.$main-text-color;
+    .create-meetub-group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8%;
+      padding: 30px 0;
+      border-bottom: 1px solid v.$theme-text-color;
+      h4 {
+        color: v.$footer-text-color;
+        font-weight: 600;
+        @include basic-text-size;
+      }
+      button {
+        color: v.$footer-text-color;
+        background: none;
+        border: 2px solid v.$footer-text-color;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        @include transition-base;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+
+        &:active {
+          transform: scale(0.97);
+        }
+      }
+    }
+
+    //footer nav
+
+    .footer-nav {
+      display: flex;
+      flex-direction: row;
+      padding: 30px 0;
+      .footer-nav-block {
+        flex: 1 1 33%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h4 {
+          color: v.$footer-text-color;
+          font-weight: 400;
+          @include basic-text-size;
+        }
+        a {
+          color: #c5c4c4;
+          font-size: 0.875rem;
+          font-weight: 400;
+          line-height: 1.25rem;
+        }
+      }
+    }
+  }
+
+  //footer folow
+
+  .follow-block {
+    padding-bottom: 45px;
+    flex-wrap: wrap;
+    h4 {
+      color: v.$footer-text-color;
+      font-weight: 400;
+      @include basic-text-size;
+      padding-bottom: 15px;
+    }
+    .folow-categorie-block {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .social {
+        display: flex;
+        gap: 15%;
+      }
+      .download {
+        display: flex;
+        gap: 5%;
+
+        @media (max-width: 430px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  //policy
+
+  .tm-policy {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    padding-bottom: 30px;
+    h5 {
+      color: v.$basic-color;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+    a {
+      color: #c5c4c4;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.25rem;
+
+      @media (max-width: 640px) {
+        display: none;
+      }
+    }
+  }
+}

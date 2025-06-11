@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./styles/style.css" /> -->
+    <link rel="stylesheet" href="./styles/sub.css" />
+  </head>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-first-box">
+        <a href="./index.html">
+          <img src="./styles/assets/logo.png" class="main-logo" />
+        </a>
+        <form class="nav-form">
+          <input
+            type="text"
+            placeholder="Search events"
+            class="nav-search nav-events"
+          />
+          <input
+            type="text"
+            placeholder="Search location"
+            value="Mountain View, CA"
+            class="nav-search nav-location"
+          />
+          <button type="submit" class="button-search">
+            <img src="./styles/assets/search-white.svg" />
+          </button>
+        </form>
+      </div>
+      <div class="nav-second-box">
+        <span>
+          <img src="./styles/assets/PLANET.svg" /><a class="language-button">
+            English
+          </a>
+        </span>
+        <a href="#" class="login-button">Log in</a>
+        <a href="#" class="sign-up-button">Sign up</a>
+      </div>
+    </nav>
+    <main class="main">
+      <div class="title-main">
+        <h1>Events near New York, NY</h1>
+        <a href="">Events</a>
+        <div class="filters">
+          <div class="filter" id="filter-type">
+            <div class="filter-name" id="filter-name-type">
+              <p>Any type</p>
+              <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
+              </div>
+            <ul class="filter-list hidden" id="filter-list-type">
+              <li id="online">Online</li>
+              <li id="offline">Offline</li>
+            </ul>
+          </div>
+          <div class="filter" id="filter-distance">
+            <div class="filter-name"><p>Any distance</p> 
+            <img  id="filter-pointer-distance" class="pointer" src="./styles/assets/pointer.svg">
+          </div>
+            <ul class="filter-list hidden" id="filter-list-distance">
+              <li id="10km">10km</li>
+              <li id="15km">15km</li>
+              <li id="25km">25km</li>
+              <li id="50km">50km</li>
+              <li id="75km">75km</li>
+              <li id="100km">100km</li>
+            </ul>
+          </div>
+          <div class="filter" id="filter-category">
+            <div class="filter-name">
+              <p>Any category</p> 
+              <img id="filter-pointer-category" class="pointer" src="./styles/assets/pointer.svg">
+            </div>
+            <ul class="filter-list hidden" id="filter-list-category">
+              <li id="social-activities">Social Activities</li>
+              <li id="hobbies-and-passions">Hobbies and Passions</li>
+              <li id="health-and-wellbeing">Health and Wellbeing</li>
+              <li id="business">Business</li>
+              <li id="technology">Technology</li>
+            </ul>
+          </div>
+          <div class="filter" id="filter-day">
+            <div class="filter-name">
+              <p>Any day </p>
+              <img id="filter-pointer-day"  class="pointer" src="./styles/assets/pointer.svg">
+            </div>
+            <ul class="filter-list hidden" id="filter-list-day">
+              <li id="mar-13-11-00">Mar13,11:00</li>
+              <li id="mar-14-11-00">Mar14,11:00</li>
+              <li id="mar-14-20-00">Mar14,20:00</li>
+              <li id="mar-16-14-00">Mar16,14:00</li>
+              <li id="mar-23-11-30">Mar23,11:30</li>
+              <li id="mar-23-15-00">Mar23,15:00</li>
+            </ul>
+          </div>
+        </div>
+        <section class="filtred-event-cards" id="filtred-event-cards">
+        </section>
+      </div>
+      <div class="map">
+        <a href="">Find events near</a>
+        <h2>New York, NY</h2>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1genpW9bQ6PCexDig26nmoPfMWnA&ehbc=2E312F" frameborder="0" scrolling="yes"></iframe>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="create-meetub-group">
+        <h4>Create your own Meetup group.</h4>
+        <button>Get Started</button>
+      </div>
+      <div class="footer-nav">
+        <section class="footer-nav-block">
+          <h4>Your Account</h4>
+          <a href="#">Sign up</a>
+          <a href="#">Log in</a>
+          <a href="#">Help</a>
+          <a href="#">Become an Affiliate</a>
+        </section>
+        <section class="footer-nav-block">
+          <h4>Discover</h4>
+          <a href="#">Groups</a>
+          <a href="#">Calendar</a>
+          <a href="#">Topics</a>
+          <a href="#">Cities</a>
+          <a href="#">Online Events</a>
+          <a href="#">Local Guides</a>
+          <a href="#">Make Friends</a>
+        </section>
+        <section class="footer-nav-block">
+          <h4>Meetup</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Meetup Pro</a>
+          <a href="#">Careers</a>
+          <a href="#">Apps</a>
+          <a href="#">Podcast</a>
+        </section>
+      </div>
+      <div class="follow-block">
+        <h4>Follow us</h4>
+        <div>
+          <div class="social">
+            <a href="https://www.facebook.com/meetup/"
+              ><img src="./styles/assets/social/Facebook.svg"
+            /></a>
+            <a href="https://x.com/meetup"
+              ><img src="./styles/assets/social/Twitter.svg"
+            /></a>
+            <a href="https://www.youtube.com/meetup"
+              ><img src="./styles/assets/social/YouTube.svg"
+            /></a>
+            <a href="https://www.instagram.com/meetup/"
+              ><img src="./styles/assets/social/Instagram.svg"
+            /></a>
+            <a href="https://www.tiktok.com/@meetup"
+              ><img src="./styles/assets/social/TikTok.svg"
+            /></a>
+          </div>
+          <div class="download">
+            <a href="https://play.google.com/store/apps/details?id=com.meetup">
+              <img src="./styles/assets/social/Google Play.png"
+            /></a>
+            <a
+              href="https://apps.apple.com/us/app/meetup-social-events-groups/id375990038"
+              ><img src="./styles/assets/social/AppStore.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="tm-policy">
+        <h5>© 2024 Meetup</h5>
+        <a href="">Terms of Service</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Do Not Sell or Share My Personal Data</a>
+        <a href="">Cookie Policy</a>
+        <a href="">Help</a>
+      </div>
+    </footer>
+    <script src="./sub_script.js"></script>
+  </body>
+</html>
+
+        
+
+

@@ -1,0 +1,266 @@
+@use "./variables.scss" as v;
+@import "./my_mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.main,
+.footer {
+  padding: 0 158.34px;
+  max-width: 1514px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .main,
+  .footer {
+    padding: 0 108.34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main,
+  .footer {
+    padding: 0 48.34px;
+  }
+}
+
+@media (max-width: 430px) {
+  .main,
+  .footer {
+    padding: 0 20px;
+  }
+}
+
+@include nav-block;
+
+//MAIN
+
+.main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5%;
+
+  .title-main {
+    h1 {
+      color: v.$main-text-color;
+      @include sub-title;
+      line-height: 2.25rem;
+      padding-bottom: 20px;
+    }
+
+    a {
+      color: v.$main-button-color;
+      font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      text-decoration: underline solid v.$main-button-color;
+      text-underline-offset: 4px;
+    }
+
+    .filters {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 3%;
+      padding-bottom: 50px;
+      padding-top: 10px;
+      padding-right: 40px;
+
+      .filter {
+        background-color: #ededed;
+        border-radius: 40px;
+        padding: 15px;
+        user-select: none;
+        cursor: pointer;
+        @include transition-base;
+        &:hover {
+          outline: 1px solid gray;
+          @include shadow-ani-2;
+        }
+
+        .filter-name {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          p {
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 0.875rem;
+            cursor: pointer;
+            text-wrap: nowrap;
+          }
+
+          .pointer {
+            padding: 0 8px;
+          }
+
+          .reverse-pointer {
+            transform: rotate(180deg);
+          }
+        }
+
+        .filter-list {
+          display: flex;
+          flex-direction: column;
+          padding: 12px 0;
+
+          li {
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 0.875rem;
+            cursor: pointer;
+            padding: 8px;
+            @include transition-base;
+            &:hover {
+              outline: 1px solid gray;
+              @include shadow-ani-2;
+              border-radius: 40px;
+              color: #f65858;
+            }
+          }
+        }
+
+        .hidden {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .map {
+    @media (max-width: 1200px) {
+      display: none;
+    }
+    a {
+      color: v.$main-text-color;
+      line-height: 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      color: v.$main-text-color;
+    }
+
+    iframe {
+      border-radius: 10px;
+      display: block;
+      height: 300px;
+      @include transition-base;
+      &:hover {
+        @include shadow-ani-1;
+      }
+    }
+  }
+}
+
+.filtred-event-cards {
+  flex-direction: column;
+  justify-content: space-between;
+  .filtred-event-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border-top: 1px solid #d9d9d9;
+    padding: 20px 0;
+    gap: 10px;
+
+    img {
+      max-width: 20%;
+      display: block;
+      border-radius: 8px;
+      object-fit: contain;
+
+      @include transition-base;
+      &:hover {
+        @include shadow-ani-1;
+        transform: scale(1.05);
+      }
+    }
+
+    .text-filtred-event-card {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding-right: 25%;
+
+      @media (max-width: 768px) {
+        padding-right: 0;
+        gap: 20px;
+      }
+
+      .info-event-card {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .date {
+          color: #7c6f50;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          letter-spacing: -0.35px;
+        }
+
+        .event-title {
+          color: v.$main-text-color;
+          font-weight: 700;
+          @include basic-text-size;
+          @include transition-base;
+          text-wrap: wrap;
+          text-decoration: none;
+
+          &:hover {
+            color: #f65858;
+          }
+        }
+
+        .theme {
+          color: v.$theme-text-color;
+          font-weight: 500;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+      }
+
+      .attsendees {
+        p {
+          color: v.$theme-text-color;
+          font-weight: 400;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@include footer-block;
