@@ -60,10 +60,18 @@ a {
   @media (max-width: 768px) {
     flex-direction: column;
   }
-
-  .main-logo {
-    padding-right: 40px;
-    cursor: pointer;
+  a {
+    @include transition-base();
+    &:hover {
+      transform: scale(1.15);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+    .main-logo {
+      padding-right: 40px;
+      cursor: pointer;
+    }
   }
 
   .nav-form {
@@ -137,13 +145,14 @@ a {
   gap: 15px;
   cursor: pointer;
 
-  span {
+  .language-block {
     display: flex;
     gap: 5px;
     flex-direction: row;
+    align-items: center;
 
     img {
-      padding-bottom: 2px;
+      max-width: 100%;
     }
 
     .language-button {
