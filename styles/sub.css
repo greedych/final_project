@@ -152,15 +152,16 @@ a {
   gap: 15px;
   cursor: pointer;
 }
-.nav-second-box span {
+.nav-second-box .language-block {
   display: flex;
   gap: 5px;
   flex-direction: row;
+  align-items: center;
 }
-.nav-second-box span img {
-  padding-bottom: 2px;
+.nav-second-box .language-block img {
+  max-width: 100%;
 }
-.nav-second-box span .language-button {
+.nav-second-box .language-block .language-button {
   color: #212121;
   font-weight: 500;
   font-size: 0.875rem;

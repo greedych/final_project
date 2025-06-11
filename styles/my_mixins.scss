@@ -232,13 +232,14 @@
     gap: 15px;
     cursor: pointer;
 
-    span {
+    .language-block {
       display: flex;
       gap: 5px;
       flex-direction: row;
+      align-items: center;
 
       img {
-        padding-bottom: 2px;
+        max-width: 100%;
       }
 
       .language-button {
