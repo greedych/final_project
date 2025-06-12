@@ -201,6 +201,7 @@ a {
       display: block;
       border-radius: 8px;
       object-fit: contain;
+      cursor: pointer;
 
       @include transition-base;
       &:hover {
