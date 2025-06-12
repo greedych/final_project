@@ -148,6 +148,7 @@ a {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   cursor: pointer;
+  user-select: none;
   transition: all 0.11s ease-in-out;
 }
 .nav-first-box .button-search:hover {
@@ -198,6 +199,7 @@ a {
   border-radius: 8px;
   padding: 8px 18px;
   text-wrap: nowrap;
+  user-select: none;
   transition: all 0.11s ease-in-out;
 }
 .nav-second-box .sign-up-button:hover {
@@ -329,6 +331,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: space-between;
 }
 .main .title-main .filters .filter .filter-name p {
   font-weight: 500;
@@ -339,6 +342,7 @@ a {
 }
 .main .title-main .filters .filter .filter-name .pointer {
   padding: 0 8px;
+  transition: all 0.3s ease;
 }
 .main .title-main .filters .filter .filter-name .reverse-pointer {
   transform: rotate(180deg);
@@ -347,6 +351,8 @@ a {
   display: flex;
   flex-direction: column;
   padding: 12px 0;
+  height: auto;
+  transition: all 0.3s ease;
 }
 .main .title-main .filters .filter .filter-list li {
   font-weight: 500;
@@ -363,7 +369,9 @@ a {
   color: #f65858;
 }
 .main .title-main .filters .filter .hidden {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
 }
 @media (max-width: 1200px) {
   .main .map {
@@ -381,6 +389,7 @@ a {
   line-height: 1.75rem;
   font-weight: 700;
   color: #212121;
+  padding-bottom: 15px;
 }
 .main .map iframe {
   border-radius: 10px;
@@ -411,6 +420,11 @@ a {
   object-fit: contain;
   cursor: pointer;
   transition: all 0.11s ease-in;
+}
+@media (max-width: 576px) {
+  .filtred-event-cards .filtred-event-card img {
+    max-width: 35%;
+  }
 }
 .filtred-event-cards .filtred-event-card img:hover {
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;

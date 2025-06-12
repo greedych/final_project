@@ -119,6 +119,7 @@ a {
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
+          justify-content: space-between;
           p {
             font-weight: 500;
             font-size: 0.875rem;
@@ -129,6 +130,7 @@ a {
 
           .pointer {
             padding: 0 8px;
+            transition: all 0.3s ease;
           }
 
           .reverse-pointer {
@@ -140,6 +142,8 @@ a {
           display: flex;
           flex-direction: column;
           padding: 12px 0;
+          height: auto;
+          transition: all 0.3s ease;
 
           li {
             font-weight: 500;
@@ -158,7 +162,10 @@ a {
         }
 
         .hidden {
-          display: none;
+          // display: none;
+          height: 0;
+          overflow: hidden;
+          padding: 0;
         }
       }
     }
@@ -179,6 +186,7 @@ a {
       line-height: 1.75rem;
       font-weight: 700;
       color: v.$main-text-color;
+      padding-bottom: 15px;
     }
 
     iframe {
@@ -210,6 +218,10 @@ a {
       border-radius: 8px;
       object-fit: contain;
       cursor: pointer;
+
+      @media (max-width: 576px) {
+        max-width: 35%;
+      }
 
       @include transition-base;
       &:hover {

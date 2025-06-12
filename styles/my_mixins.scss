@@ -219,6 +219,7 @@
       border-top-right-radius: 8px;
       border-bottom-right-radius: 8px;
       cursor: pointer;
+      user-select: none;
       transition: all 0.11s ease-in-out;
       &:hover {
         background-color: #d84e4e;
@@ -274,6 +275,7 @@
       border-radius: 8px;
       padding: 8px 18px;
       text-wrap: nowrap;
+      user-select: none;
       transition: all 0.11s ease-in-out;
 
       &:hover {
