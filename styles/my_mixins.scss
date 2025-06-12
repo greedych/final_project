@@ -279,6 +279,7 @@
       &:hover {
         background-color: #006b79;
         transform: scale(1.09);
+        @include shadow-ani-2;
       }
 
       &:active {
