@@ -29,7 +29,8 @@ a {
 }
 
 .main,
-.footer {
+.footer,
+.hidden-nav {
   padding: 0 158.34px;
   max-width: 1514px;
   margin: 0 auto;
@@ -38,29 +39,33 @@ a {
 
 @media (max-width: 1024px) {
   .main,
-  .footer {
+  .footer,
+  .hidden-nav {
     padding: 0 108.34px;
   }
 }
 
 @media (max-width: 768px) {
   .main,
-  .footer {
+  .footer,
+  .hidden-nav {
     padding: 0 48.34px;
   }
 }
 
 @media (max-width: 430px) {
   .main,
-  .footer {
+  .footer,
+  .hidden-nav {
     padding: 0 20px;
   }
 }
 
 @include nav-block;
 
-//MAIN
+@include form-768px;
 
+//MAIN
 .main {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -70,6 +75,7 @@ a {
   gap: 5%;
 
   .title-main {
+    width: 100%;
     h1 {
       color: v.$main-text-color;
       @include sub-title;
@@ -94,6 +100,7 @@ a {
       padding-bottom: 50px;
       padding-top: 10px;
       padding-right: 40px;
+      overflow: auto;
 
       .filter {
         background-color: #ededed;
@@ -197,7 +204,7 @@ a {
     gap: 10px;
 
     img {
-      max-width: 20%;
+      max-width: 25%;
       display: block;
       border-radius: 8px;
       object-fit: contain;
