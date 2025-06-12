@@ -83,6 +83,11 @@ const filterCategoryAll = document.querySelector(`#filter-category`);
 const filterDay = document.getElementById(`filter-day`);
 const filterDayAll = document.querySelector(`#filter-day`);
 
+// const filterNameType = document.getElementById(`filter-name-type`);
+// const filterNameDistance = document.getElementById(`filter-name-distance`);
+// const filterNameCategory = document.getElementById(`filter-name-category`);
+// const filterNameDate = document.getElementById(`filter-name-type`);
+
 const createCard = (element) => {
   const filtredEventCard = document.createElement(`div`);
 
@@ -127,6 +132,10 @@ const filteredType = (e) => {
   if (e.target.tagName !== `LI`) return false;
 
   filtredEventCards.innerHTML = ``;
+  // filterNameType.innerHTML = `
+  //         <p>${e.target.textContent}</p>
+  //         <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
+  //         `;
 
   eventsStore.forEach((item) => {
     if (item.type === `online` && e.target.id === `online`) {
@@ -143,6 +152,10 @@ const filteredDistance = (e) => {
   if (e.target.tagName !== `LI`) return false;
 
   filtredEventCards.innerHTML = ``;
+  // filterNameDistance.innerHTML = `
+  //         <p>${e.target.textContent}</p>
+  //         <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
+  //         `;
 
   eventsStore.forEach((item) => {
     if (item.distance === 10 && e.target.id === `10km`) {
@@ -174,6 +187,11 @@ const filteredDistance = (e) => {
 const filteredCategory = (e) => {
   if (e.target.tagName !== `LI`) return false;
   filtredEventCards.innerHTML = ``;
+
+  // filterNameCategory.innerHTML = `
+  //         <p>${e.target.textContent}</p>
+  //         <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
+  //         `;
 
   eventsStore.forEach((item) => {
     if (
@@ -210,6 +228,10 @@ const filteredCategory = (e) => {
 const filtredDate = (e) => {
   if (e.target.tagName !== `LI`) return false;
   filtredEventCards.innerHTML = ``;
+  // filterNameDate.innerHTML = `
+  //         <p>${e.target.textContent}</p>
+  //         <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
+  //         `;
 
   console.log(e.target.id);
 
