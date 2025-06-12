@@ -11,6 +11,10 @@ body,
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+
+  // @media (max-width: 430px) {
+  //   font-size: 1px;
+  // }
 }
 
 a {
@@ -71,6 +75,9 @@ a {
     .main-logo {
       padding-right: 40px;
       cursor: pointer;
+      @media (max-width: 430px) {
+        padding-right: 10px;
+      }
     }
   }
 
@@ -113,9 +120,6 @@ a {
 
   .nav-location {
     border-left: none;
-    @media (max-width: 768px) {
-      display: none;
-    }
   }
 
   .button-search {
@@ -231,6 +235,14 @@ a {
   border-bottom-left-radius: 8px;
 }
 
+.nav-location {
+  border-left: none;
+
+  @media (max-width: 430px) {
+    display: none;
+  }
+}
+
 .button-search {
   background-color: #f65858;
   padding: 7px;
@@ -249,14 +261,6 @@ a {
     }
   }
 }
-
-// .language-button::before {
-//   content: "";
-//   background-image: url("./assets/PLANET.svg");
-//   width: 20px;
-//   height: 20px;
-//   right: 0;
-// }
 
 /* main */
 
@@ -320,6 +324,7 @@ a {
 .title-events {
   display: flex;
   flex-direction: row;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -356,14 +361,18 @@ a {
         transform: scale(0.95);
       }
 
-      @media (max-width: 430px) {
-        transform: scale(0.8);
+      @media (max-width: 576px) {
+        padding: 7px;
       }
 
       a {
         color: v.$main-button-color;
         font-weight: 600;
         font-size: 1.25rem;
+
+        @media (max-width: 576px) {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -560,6 +569,7 @@ a {
   p {
     @include gray-text;
   }
+
   .cities {
     display: flex;
     flex-direction: row;
@@ -568,12 +578,20 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     gap: 3%;
+    row-gap: 20px;
     padding-top: 30px;
+
+    @media (max-width: 640px) {
+      .city:last-of-type {
+        display: none;
+      }
+    }
 
     .city {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      max-width: 45%;
 
       img {
         border-radius: 50%;
@@ -787,7 +805,7 @@ a {
       display: flex;
       gap: 5%;
 
-      @media (max-width: 430px) {
+      @media (max-width: 640px) {
         display: none;
       }
     }

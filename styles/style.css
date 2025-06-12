@@ -74,6 +74,11 @@ a {
   padding-right: 40px;
   cursor: pointer;
 }
+@media (max-width: 430px) {
+  .nav-first-box a .main-logo {
+    padding-right: 10px;
+  }
+}
 .nav-first-box .nav-form {
   display: flex;
   flex: 1 1 33%;
@@ -110,11 +115,6 @@ a {
 }
 .nav-first-box .nav-location {
   border-left: none;
-}
-@media (max-width: 768px) {
-  .nav-first-box .nav-location {
-    display: none;
-  }
 }
 .nav-first-box .button-search {
   background-color: #f65858;
@@ -220,6 +220,15 @@ a {
   border-bottom-left-radius: 8px;
 }
 
+.nav-location {
+  border-left: none;
+}
+@media (max-width: 430px) {
+  .nav-location {
+    display: none;
+  }
+}
+
 .button-search {
   background-color: #f65858;
   padding: 7px;
@@ -292,6 +301,7 @@ a {
 .title-events {
   display: flex;
   flex-direction: row;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -325,15 +335,20 @@ a {
 .title-events .title-location-container .location-sub-button:active {
   transform: scale(0.95);
 }
-@media (max-width: 430px) {
+@media (max-width: 576px) {
   .title-events .title-location-container .location-sub-button {
-    transform: scale(0.8);
+    padding: 7px;
   }
 }
 .title-events .title-location-container .location-sub-button a {
   color: #00798a;
   font-weight: 600;
   font-size: 1.25rem;
+}
+@media (max-width: 576px) {
+  .title-events .title-location-container .location-sub-button a {
+    font-size: 1rem;
+  }
 }
 
 .button-see-all {
@@ -380,6 +395,10 @@ a {
   font-size: 1.25rem;
   color: #212121;
   cursor: pointer;
+  transition: all 0.11s ease-in;
+}
+.event-card .event-card-title:hover {
+  color: #f65858;
 }
 .event-card .event-card-text {
   font-weight: 500;
@@ -482,6 +501,10 @@ a {
   font-size: 1.25rem;
   color: #212121;
   cursor: pointer;
+  transition: all 0.11s ease-in;
+}
+.online-event-card .event-card-title:hover {
+  color: #f65858;
 }
 .online-event-card .event-card-text {
   font-weight: 500;
@@ -670,12 +693,19 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   gap: 3%;
+  row-gap: 20px;
   padding-top: 30px;
+}
+@media (max-width: 640px) {
+  .popular-cities .cities .city:last-of-type {
+    display: none;
+  }
 }
 .popular-cities .cities .city {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 45%;
 }
 .popular-cities .cities .city img {
   border-radius: 50%;
@@ -877,7 +907,7 @@ a {
   display: flex;
   gap: 5%;
 }
-@media (max-width: 430px) {
+@media (max-width: 640px) {
   .follow-block .folow-categorie-block .download {
     display: none;
   }
