@@ -83,10 +83,10 @@ const filterCategoryAll = document.querySelector(`#filter-category`);
 const filterDay = document.getElementById(`filter-day`);
 const filterDayAll = document.querySelector(`#filter-day`);
 
-// const filterNameType = document.getElementById(`filter-name-type`);
-// const filterNameDistance = document.getElementById(`filter-name-distance`);
-// const filterNameCategory = document.getElementById(`filter-name-category`);
-// const filterNameDate = document.getElementById(`filter-name-type`);
+const filterNameType = document.getElementById(`filter-name-type`);
+const filterNameDistance = document.getElementById(`filter-name-distance`);
+const filterNameCategory = document.getElementById(`filter-name-category`);
+const filterNameDate = document.getElementById(`filter-name-date`);
 
 const createCard = (element) => {
   const filtredEventCard = document.createElement(`div`);
@@ -132,10 +132,10 @@ const filteredType = (e) => {
   if (e.target.tagName !== `LI`) return false;
 
   filtredEventCards.innerHTML = ``;
-  // filterNameType.innerHTML = `
-  //         <p>${e.target.textContent}</p>
-  //         <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
-  //         `;
+  filterNameType.innerHTML = `
+          <p>${e.target.textContent}</p>
+          <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
+          `;
 
   eventsStore.forEach((item) => {
     if (item.type === `online` && e.target.id === `online`) {
@@ -152,10 +152,10 @@ const filteredDistance = (e) => {
   if (e.target.tagName !== `LI`) return false;
 
   filtredEventCards.innerHTML = ``;
-  // filterNameDistance.innerHTML = `
-  //         <p>${e.target.textContent}</p>
-  //         <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
-  //         `;
+  filterNameDistance.innerHTML = `
+          <p>${e.target.textContent}</p>
+          <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
+          `;
 
   eventsStore.forEach((item) => {
     if (item.distance === 10 && e.target.id === `10km`) {
@@ -188,10 +188,10 @@ const filteredCategory = (e) => {
   if (e.target.tagName !== `LI`) return false;
   filtredEventCards.innerHTML = ``;
 
-  // filterNameCategory.innerHTML = `
-  //         <p>${e.target.textContent}</p>
-  //         <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
-  //         `;
+  filterNameCategory.innerHTML = `
+          <p>${e.target.textContent}</p>
+          <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
+          `;
 
   eventsStore.forEach((item) => {
     if (
@@ -228,10 +228,10 @@ const filteredCategory = (e) => {
 const filtredDate = (e) => {
   if (e.target.tagName !== `LI`) return false;
   filtredEventCards.innerHTML = ``;
-  // filterNameDate.innerHTML = `
-  //         <p>${e.target.textContent}</p>
-  //         <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
-  //         `;
+  filterNameDate.innerHTML = `
+          <p>${e.target.textContent}</p>
+          <img id="filter-pointer-type"  class="pointer" src="./styles/assets/pointer.svg">
+          `;
 
   console.log(e.target.id);
 
@@ -331,35 +331,32 @@ const init = () => {
 
     const pointer = document.getElementById(`filter-pointer-type`);
 
-    pointer.classList.toggle(`reverse-pointer`);
     filterListType.classList.toggle(`hidden`);
+    pointer?.classList.toggle(`reverse-pointer`);
   });
 
   filterDistance.addEventListener(`click`, () => {
     const filterListDistance = document.getElementById(`filter-list-distance`);
     const pointer = document.getElementById(`filter-pointer-distance`);
 
-    pointer.classList.toggle(`reverse-pointer`);
-
     filterListDistance.classList.toggle(`hidden`);
+    pointer?.classList.toggle(`reverse-pointer`);
   });
 
   filterCategory.addEventListener(`click`, () => {
     const filterListCategory = document.getElementById(`filter-list-category`);
     const pointer = document.getElementById(`filter-pointer-category`);
 
-    pointer.classList.toggle(`reverse-pointer`);
-
     filterListCategory.classList.toggle(`hidden`);
+    pointer?.classList.toggle(`reverse-pointer`);
   });
 
   filterDay.addEventListener(`click`, () => {
     const filterListDay = document.getElementById(`filter-list-day`);
     const pointer = document.getElementById(`filter-pointer-day`);
 
-    pointer.classList.toggle(`reverse-pointer`);
-
     filterListDay.classList.toggle(`hidden`);
+    pointer?.classList.toggle(`reverse-pointer`);
   });
 
   filterCategoryAll.addEventListener(`click`, filteredCategory);
