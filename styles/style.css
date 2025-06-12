@@ -883,6 +883,11 @@ a {
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.11s ease-in;
+}
+.friendships-block .friendships-cards .friendships-card img:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transform: scale(1.02);
 }
 .friendships-block .friendships-cards .friendships-card h3 {
   color: #212121;
@@ -890,6 +895,11 @@ a {
   line-height: 1.75rem;
   font-weight: 600;
   width: 80%;
+  cursor: pointer;
+  transition: all 0.11s ease-in;
+}
+.friendships-block .friendships-cards .friendships-card h3:hover {
+  color: #f65858;
 }
 .friendships-block .friendships-cards .friendships-card a {
   color: #00798a;
